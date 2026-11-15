@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #090406;
+    --bg-secondary: #12070a;
+    --bg-card: #16090c;
+    --border-subtle: rgba(220, 38, 38, 0.25);
+    --border-active: #ef4444;
+    --accent-red: #dc2626;
+    --accent-crimson: #991b1b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-danger: #fca5a5;
+}
+
+.stApp {
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(circle at 12% 10%, rgba(220, 38, 38, 0.12) 0%, transparent 45%),
+        linear-gradient(rgba(153, 27, 27, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(153, 27, 27, 0.14) 1px, transparent 1px);
+    background-size: 100% 100%, 28px 28px, 28px 28px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: var(--bg-secondary);
+    border-right: 1px solid var(--border-subtle);
+}
+
+/* SOC Üst Başlık Paneli */
+.soc-header {
+    background: linear-gradient(90deg, #16080b 0%, #240b10 100%);
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.soc-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.soc-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: #f87171;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.soc-subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-top: 6px;
+}
+
+/* Telemetri / Metrik Kutuları */
+.telemetry-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 14px 16px;
+    transition: border-color 0.15s ease;
+}
+
+.telemetry-card:hover {
+    border-color: var(--border-active);
+}
+
+.telemetry-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.telemetry-lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: #fca5a5;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+}
+
+/* Teknik Hash Satırları */
+.hash-row {
+    background-color: #110608;
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--accent-red);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+/* Durum Etiketleri (Emojisiz Profesyonel Rozetler) */
+.verdict-clean {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid #059669;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.verdict-suspicious {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border: 1px solid #d97706;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.verdict-malicious {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgba(220, 38, 38, 0.2);
+    color: #fca5a5;
+    border: 1px solid #ef4444;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* Sekme Çubuğu */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+    background-color: #120609;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+}
+
+.stTabs [data-baseweb="tab"] {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    color: #94a3b8;
+    padding: 8px 14px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #3f0d12 !important;
+    color: #fecaca !important;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+
+/* Ana Aksiyon Butonları */
+.stButton > button[kind="primary"] {
+    background-color: #b91c1c;
+    border: 1px solid #ef4444;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: #991b1b;
+    border-color: #fca5a5;
+}

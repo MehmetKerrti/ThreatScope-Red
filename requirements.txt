@@ -1,0 +1,5 @@
+streamlit
+pefile
+pandas
+requests
+plotly
