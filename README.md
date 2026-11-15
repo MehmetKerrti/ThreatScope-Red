@@ -39,24 +39,30 @@ Klasik tek dosyalık hantal betiklerin aksine; arayüz tasarımı, çekirdek ana
 
 ---
 
-## 📂 Proje Mimarisi
+## ⚡ Nasıl Kurulur ve Çalıştırılır?
 
-```text
-ThreatScope-Red/
-├── main.py                  # Ana uygulama giriş noktası ve SOC arayüz akışı
-├── baslat.bat               # Tek tıkla otomatik kurulum ve yerel sunucu başlatıcı
-├── requirements.txt         # Bağımlı Python kütüphaneleri
-├── README.md                # Proje dokümantasyonu
-├── preview.png              # Proje tanıtım görseli
-│
-├── assets/
-│   └── style.css            # Koyu kırmızı (Crimson Dark) SOC tema tasarımı
-│
-├── engine/
-│   ├── __init__.py          # Paket tanımlayıcı
-│   ├── pe_analyzer.py       # PE başlık, IMPHASH, imza ve kayan entropi motoru
-│   ├── ioc_extractor.py     # Regex tabanlı IOC ve MITRE kural tarayıcı
-│   └── vt_client.py         # VirusTotal API v3 sorgu ve yükleme istemcisi
-│
-└── rules/
-    └── signatures.json      # Harici tehdit imzaları ve hassas API veritabanı
+Uygulamayı kendi bilgisayarınızda (`localhost`) çalıştırmak için sisteminizde **Python 3.10 veya üzeri** kurulu olmalıdır *(Python kurulumunda `"Add Python to PATH"` seçeneğinin işaretli olduğundan emin olun)*.
+
+### 1. Yöntem: Windows Tek Tıkla Otomatik Kurulum (Önerilen)
+
+1. Sağ üstteki yeşil **`<> Code`** butonuna tıklayın ve **`Download ZIP`** seçeneğini seçerek projeyi indirin.
+2. İndirdiğiniz ZIP dosyasına sağ tıklayıp **"Tümünü Ayıkla" (Extract All)** diyerek klasöre çıkartın.
+3. Klasörün içerisindeki **`baslat.bat`** dosyasına çift tıklayın.
+4. Başlatıcı betik gerekli tüm kütüphaneleri (`streamlit`, `pefile`, `pandas`, `requests`, `plotly`) otomatik olarak kuracak ve varsayılan tarayıcınızda **`http://localhost:8501`** adresini açacaktır.
+
+*(Uygulamayı kapatmak için açık olan siyah-kırmızı terminal penceresini kapatmanız veya `CTRL + C` tuşlarına basmanız yeterlidir.)*
+
+### 2. Yöntem: Terminal / Manuel Kurulum (Windows, Linux, macOS)
+
+Komut satırını (CMD / Terminal) açarak aşağıdaki komutları sırasıyla çalıştırın:
+
+```bash
+# 1. Depoyu bilgisayarınıza klonlayın ve klasöre girin
+git clone [https://github.com/MehmetKerrti/ThreatScope-Red.git](https://github.com/MehmetKerrti/ThreatScope-Red.git)
+cd ThreatScope-Red
+
+# 2. Gerekli Python bağımlılıklarını yükleyin
+pip install -r requirements.txt
+
+# 3. Uygulamayı yalnızca yerel makineden erişilecek şekilde başlatın
+python -m streamlit run main.py --server.address 127.0.0.1
