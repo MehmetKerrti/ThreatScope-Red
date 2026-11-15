@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Projenin Amacı ve Yaklaşımı (Vibe Coding)
+## 🎯 Projenin Amacı ve Yaklaşımı
 
 Bu proje, modern yazılım geliştirme pratiklerinden **Vibe Coding** yaklaşımıyla; fikir aşamasından çalışan, modüler bir siber güvenlik aracına dönüşene kadar hızlı prototipleme, iteratif tasarım ve yapay zeka destekli eşli programlama (AI-assisted pair programming) süreçleriyle geliştirilmiştir.
 
