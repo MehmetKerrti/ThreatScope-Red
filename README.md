@@ -39,23 +39,35 @@ Klasik tek dosyalık hantal betiklerin aksine; arayüz tasarımı, çekirdek ana
 
 ---
 
-## 📂 Proje Mimarisi
+## ⚡ Adım Adım Kurulum ve Çalıştırma Rehberi
 
-```text
-ThreatScope-Red/
-├── main.py                  # Ana uygulama giriş noktası ve SOC arayüz akışı
-├── baslat.bat               # Tek tıkla otomatik kurulum ve yerel sunucu başlatıcı
-├── requirements.txt         # Bağımlı Python kütüphaneleri
-├── README.md                # Proje dokümantasyonu
-│
-├── assets/
-│   └── style.css            # Koyu kırmızı (Crimson Dark) SOC tema tasarımı
-│
-├── engine/
-│   ├── __init__.py          # Paket tanımlayıcı
-│   ├── pe_analyzer.py       # PE başlık, IMPHASH, imza ve kayan entropi motoru
-│   ├── ioc_extractor.py     # Regex tabanlı IOC ve MITRE kural tarayıcı
-│   └── vt_client.py         # VirusTotal API v3 sorgu ve yükleme istemcisi
-│
-└── rules/
-    └── signatures.json      # Harici tehdit imzaları ve hassas API veritabanı
+Uygulamayı kendi bilgisayarınızda (`localhost`) çalıştırmak için aşağıdaki iki yöntemden birini kullanabilirsiniz.
+
+### Ön Gereksinim: Python Kurulumu
+Bilgisayarınızda **Python 3.10 veya üzeri** kurulu olmalıdır.
+1. [python.org/downloads](https://www.python.org/downloads/) adresinden Python kurulum dosyasını indirin.
+2. Kurulum ekranının en altındaki **`"Add Python to PATH"`** kutucuğunu **mutlaka işaretleyin** ve **Install Now** butonuna basın.
+
+---
+
+### Yöntem 1: Tek Tıkla Otomatik Kurulum ve Başlatma (Windows - Önerilen)
+
+Hiçbir terminal komutu yazmadan uygulamayı saniyeler içinde başlatabilirsiniz:
+
+1. **Projeyi İndirin:** Bu sayfanın sağ üstündeki yeşil **`<> Code`** butonuna tıklayın ve **`Download ZIP`** seçeneğini seçin.
+2. **Klasöre Çıkartın:** İnen `ThreatScope-Red-main.zip` dosyasına sağ tıklayıp **"Tümünü Ayıkla" (Extract All)** diyerek masaüstüne çıkartın.
+3. **Başlatıcıyı Çalıştırın:** Çıkarttığınız klasörün içine girin ve **`baslat.bat`** dosyasına çift tıklayın.
+4. **Otomatik Kurulum:** Açılan siyah-kırmızı terminal ekranı gerekli tüm Python kütüphanelerini (`streamlit`, `pefile`, `pandas`, `requests`, `plotly`) otomatik olarak kuracak ve varsayılan tarayıcınızda **`http://localhost:8501`** adresini otomatik olarak açacaktır.
+
+*(Uygulamayı kapatmak istediğinizde terminal penceresini kapatmanız veya klavyeden `CTRL + C` tuşlarına basmanız yeterlidir.)*
+
+---
+
+### Yöntem 2: Terminal / Manuel Kurulum (Windows, Linux, macOS)
+
+Projeyi komut satırı üzerinden klonlayıp manuel kurmak için aşağıdaki adımları sırasıyla uygulayın:
+
+**1. Depoyu bilgisayarınıza klonlayın ve klasöre girin:**
+```bash
+git clone [https://github.com/MehmetKerrti/ThreatScope-Red.git](https://github.com/MehmetKerrti/ThreatScope-Red.git)
+cd ThreatScope-Red
