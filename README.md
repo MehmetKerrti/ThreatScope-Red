@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="preview.png" alt="DTH ThreatScope Red Banner" width="100%">
+</p>
+
 # 🛡️ DTH ThreatScope Red
 
 **DTH ThreatScope Red**, şüpheli ikili dosyaları (`EXE`, `DLL`, `SYS`), zararlı betikleri (`PS1`, `BAT`, `VBS`, `PY`) ve kriptografik hash değerlerini kendi bilgisayarınızda (`127.0.0.1`) izole bir ortamda incelemenizi sağlayan, **VirusTotal API v3** destekli modüler bir statik ve hibrit zararlı yazılım analiz platformudur.
@@ -6,7 +10,7 @@
 
 ---
 
-## 🎯 Projenin Amacı ve Yaklaşımı
+## 🎯 Projenin Amacı ve Yaklaşımı (Vibe Coding)
 
 Bu proje, modern yazılım geliştirme pratiklerinden **Vibe Coding** yaklaşımıyla; fikir aşamasından çalışan, modüler bir siber güvenlik aracına dönüşene kadar hızlı prototipleme, iteratif tasarım ve yapay zeka destekli eşli programlama (AI-assisted pair programming) süreçleriyle geliştirilmiştir.
 
